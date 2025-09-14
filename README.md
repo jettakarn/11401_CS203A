@@ -13,6 +13,7 @@
 ## Personal Info
 - **Name:** Che-Sen Wei
 - **Student ID:** 1133524
+- **Website:** [jettakarn.github.io](jettakarn.github.io)
 
 ## Repository Description
 What's uppppp!
