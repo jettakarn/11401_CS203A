@@ -7,11 +7,11 @@
 - **Instructor:** Yu-Feng Huang  
 - **Course Time(Classroom):** Monday 09:10–10:00 (R60104); Tuesday 15:10–17:00 (R1102)  
 - **Contact:** [Yu-Feng Huang](mailto:yfhuang@saturn.yzu.edu.tw)  
-- **Teaching Assistant:** To be announced  
+- **Teaching Assistant:** TBA
 - **Office Hours:** Monday 14:00-16:00; Wednesday 14:00–16:00
 
 ## Personal Info
-- **Name:** CHE-SEN, WEI
+- **Name:** Che-Sen Wei
 - **Student ID:** 1133524
 
 ## Repository Description
