@@ -1,7 +1,7 @@
 # Data Structures (11401_CS203A)
 ## Course Information
 - **Course Title:** Data Structures  
-- **Course Code:** CS203A  
+- **Course Code:** [CS203A](https://github.com/yfhuang/11401_CS203A/tree/main) 
 - **Semester:** 11401  
 - **Credits:** 3  
 - **Instructor:** Yu-Feng Huang  
