@@ -8,13 +8,20 @@
 
    Development History:
     - 2025/11/11: Initial implementation
+    - 2025/11/17: Refactored to use hash_fn.hpp
 
    Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
  */
-#include <string>
+#include "hash_fn.hpp"
 
+/*
+ * @brief Computes the hash index for an integer key.
+ * @param key The integer key to hash.
+ * @param m The table size.
+ * @return The computed hash index.
+ */
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
+    
     return key % m;  // basic division method
 }
 

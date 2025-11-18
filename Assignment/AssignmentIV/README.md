@@ -4,8 +4,8 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: [CHE-SEN WEI]
-Email: [itsjazzk@proton.me]
+Developer: CHE-SEN WEI  
+Email: itsjazzk@proton.me
 
 ## My Hash Function
 ### Integer Keys 
@@ -40,23 +40,32 @@ Email: [itsjazzk@proton.me]
 ## Compilation, Build, Execution, and Output
 
 ### Compilation
+- The project uses a comprehensive Makefile that builds both C and C++ versions with proper flags:
+  ```bash
+  # Build both C and C++ versions
+  make all
+  
+  # Build only C version
+  make c
+  
+  # Build only C++ version
+  make cxx
+  ```
+
+### Manual Compilation (if needed)
 - Command for C:
   ```bash
-  gcc -std=c23 -o hash_function main.c
+  gcc -std=c23 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
   ```
 - Command for C++:
   ```bash
-  g++ -std=c++23 -o hash_function_cpp main.cpp
+  g++ -std=c++23 -Wall -Wextra -Wpedantic -g -o CXX/hash_function_cpp CXX/main.cpp CXX/hash_fn.cpp
   ```
 
-### Make Binary
-- Use the following `Makefile` to automate the build process:
-  ```makefile
-  all:
-      gcc -std=c23 -o hash_function main.c
-      g++ -std=c++23 -o hash_function_cpp main.cpp
-  clean:
-      rm -f hash_function hash_function_cpp
+### Clean Build Files
+- Remove all compiled files:
+  ```bash
+  make clean
   ```
 
 ### Execution
