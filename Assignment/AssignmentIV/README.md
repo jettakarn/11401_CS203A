@@ -7,6 +7,23 @@ evaluate their efficiency, and understand their applications in computer science
 Developer: jettakarn 
 Email: itsjazzk@proton.me
 
+## Repository Structure
+```text
+AssignmentIV/
+├── C/                      # C implementation directory
+│   ├── hash_fn.c           # Hash function implementation in C
+│   ├── hash_fn.h           # Header file for C hash functions
+│   └── main.c              # Main program calling hash functions
+├── CXX/                    # C++ implementation directory
+│   ├── hash_fn.cpp         # Hash function implementation in C++
+│   ├── hash_fn.hpp         # Header file for C++ hash functions
+│   └── main.cpp            # Main program calling hash functions
+├── Makefile                # Build configuration file for Linux platform
+├── Makefile.bat            # Build configuration file for Windows platform
+├── README.md               # README documentation
+└── VSCode.md               # VS Code setup instructions
+```
+
 ## My Hash Function
 ### Integer Keys 
 - Formula / pseudocode:
