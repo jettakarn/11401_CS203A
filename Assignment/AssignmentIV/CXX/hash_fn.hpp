@@ -8,13 +8,18 @@
 
    Development History:
     - 2025/11/17: Initial implementation
+    - 2025/11/18: Adjusted few libraries
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+   Developer: Che-Sen Wei <itsjazzk@proton.me>
  */
 #ifndef HASH_FN_HPP
 #define HASH_FN_HPP
 
+#include <cstdint>
+#include <cassert>
 #include <string>
+#include <iostream>
+#include "hash_fn.cpp"
 
 int myHashString(const std::string& str, int m);
 int myHashInt(int key, int m);

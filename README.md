@@ -4,10 +4,8 @@
 - **Course Code:** [CS203A](https://github.com/yfhuang/11401_CS203A/tree/main) 
 - **Semester:** 11401  
 - **Credits:** 3  
-- **Instructor:** Yu-Feng Huang  
+- **Instructor:** [Yu-Feng Huang](mailto:yfhuang@saturn.yzu.edu.tw)  
 - **Course Time(Classroom):** Monday 09:10–10:00 (R60104); Tuesday 15:10–17:00 (R1102)  
-- **Contact:** [Yu-Feng Huang](mailto:yfhuang@saturn.yzu.edu.tw)  
-- **Teaching Assistant:** TBA
 - **Office Hours:** Monday 14:00-16:00; Wednesday 14:00–16:00
 
 ## Personal Info
@@ -17,4 +15,5 @@
 
 ## Repository Description
 What's uppppp!
+Shoutout to TA and Professor! Welcome!
 This is the repo I use to get evaluated by the professor.
