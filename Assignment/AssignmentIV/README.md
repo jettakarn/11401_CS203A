@@ -310,7 +310,7 @@ AssignmentIV/
 ## Observations
 From the integer results, I observed that non-prime table sizes create clear patterns. For example, when using m = 10 or m = 11, many keys fall into repeating index cycles, and several positions get crowded. This shows that the modulus interacts with the key pattern and produces many collisions.
 
-For the string results, a similar problem appears. With small non-prime values, several words end up in the same index, (mailto:yfhuang@saturn.yzu.edu.tw)  and the distribution looks unbalanced. Some indices are used many times, while others are almost never used.
+For the string results, a similar problem appears. With small non-prime values, several words end up in the same index, and the distribution looks unbalanced. Some indices are used many times, while others are almost never used.
 
 When using a prime table size, like m = 37, both the integer and string hash values spread much more evenly. There are fewer collisions, and the distribution does not form simple repeating patterns. The results look more “random” and smooth.
 
