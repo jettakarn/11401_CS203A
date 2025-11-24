@@ -18,8 +18,6 @@
 #include <cstdint>
 #include <cassert>
 #include <string>
-#include <iostream>
-#include "hash_fn.cpp"
 
 int myHashString(const std::string& str, int m);
 int myHashInt(int key, int m);

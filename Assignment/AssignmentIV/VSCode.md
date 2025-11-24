@@ -1,4 +1,4 @@
-# Visual Studio and GitHub Setup Guide (Ubuntu)
+# Visual Studio and GitHub Setup Guide (Linux/Ubuntu)
 ## Prerequisites
 ### Install VS Code
 Option 1 - Use apt (Recommended)

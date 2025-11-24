@@ -19,7 +19,6 @@
 #include <string.h>
 #include <stdint.h>
 #include <assert.h>
-#include "hash_fn.c"
 
 int myHashString(const char* str, int m);
 int myHashInt(int key, int m);

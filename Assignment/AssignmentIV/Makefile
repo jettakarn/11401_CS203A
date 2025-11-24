@@ -3,7 +3,7 @@ CC      := gcc
 CXX     := g++
 
 # Flags (adjust as you like)
-CFLAGS   := -std=c23 -Wall -Wextra -Wpedantic -g
+CFLAGS   := -std=c17 -Wall -Wextra -Wpedantic -g
 CXXFLAGS := -std=c++23 -Wall -Wextra -Wpedantic -g
 
 # ==== C version ====

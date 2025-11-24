@@ -10,13 +10,12 @@
 
    Development History:
     - 2025/11/11: Initial implementation
+    - 2025/11/22: Adjusted libraries
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+   Developer: Che-Sen Wei <itsjazzk@proton.me>
  */
-
 #include <iostream>
 #include <vector>
-#include <string>
 #include "hash_fn.hpp"
 
 // Caution: Do not change the content of this file.

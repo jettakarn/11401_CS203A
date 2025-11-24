@@ -4,8 +4,8 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: jettakarn 
-Email: itsjazzk@proton.me
+* Developer: CHE-SEN WEI (jettakarn)
+* Email: [itsjazzk@proton.me](mailto:itsjazzk@proton.me)
 
 ## Repository Structure
 ```text
@@ -19,7 +19,6 @@ AssignmentIV/
 │   ├── hash_fn.hpp         # Header file for C++ hash functions
 │   └── main.cpp            # Main program calling hash functions
 ├── Makefile                # Build configuration file for Linux platform
-├── Makefile.bat            # Build configuration file for Windows platform
 ├── README.md               # README documentation
 └── VSCode.md               # VS Code setup instructions
 ```
@@ -88,17 +87,20 @@ AssignmentIV/
 
 ## Compilation, Build, Execution, and Output
 
+### Prerequisites & Build
+- Tool
+  - Microsoft Visual Studio Code
+
+- System Dependencies
+  - Make: Automating the compilation workflow
+  - Git: Cloning and version control
+
+- Environment
+  - OS: Ubuntu 24.04.3 LTS
+  - Language: C17 and C++23
+
 ### Compilation
-- I use Ubuntu, so I can compile .c and .cpp files using the default GNU compilers (gcc and g++).
-  ```bash
-  # Compile a C file
-  gcc main.c -o main
-
-  # Compile a C++ file
-  g++ main.cpp -o main
-  ```
-
-- The project includes both C and C++ code, you can manage the build with a simple Makefile:
+- Build with a simple Makefile:
   ```bash
   # Build both C and C++ versions
   make all
@@ -108,204 +110,31 @@ AssignmentIV/
   
   # Build only C++ version
   make cxx
+
+  # Remove compiled files
+  make clean
   ```
 
-### Result Snapshot
-- Example output for integers:
-  ```
-  === Hash Function Observation (C Version) ===
+- Using the default GNU compilers (manual compilation)
+  ```bash
+  # Compile a C file
+  gcc -std=c17 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
 
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      9
-  22      4
-  23      9
-  24      0
-  25      5
-  26      0
-  27      1
-  28      6
-  29      7
-  30      2
-  51      5
-  52      0
-  53      1
-  54      6
-  55      7
-  56      2
-  57      7
-  58      8
-  59      3
-  60      8
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      8
-  22      3
-  23      9
-  24      8
-  25      3
-  26      9
-  27      8
-  28      3
-  29      2
-  30      8
-  51      1
-  52      7
-  53      6
-  54      1
-  55      0
-  56      6
-  57      1
-  58      0
-  59      6
-  60      1
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      32
-  22      27
-  23      22
-  24      24
-  25      19
-  26      14
-  27      16
-  28      11
-  29      13
-  30      8
-  51      33
-  52      28
-  53      30
-  54      25
-  55      27
-  56      22
-  57      17
-  58      19
-  59      14
-  60      9
-
-  === Hash Function Observation (C++ Version) ===
-
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      9
-  22      4
-  23      9
-  24      0
-  25      5
-  26      0
-  27      1
-  28      6
-  29      7
-  30      2
-  51      5
-  52      0
-  53      1
-  54      6
-  55      7
-  56      2
-  57      7
-  58      8
-  59      3
-  60      8
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      8
-  22      3
-  23      9
-  24      8
-  25      3
-  26      9
-  27      8
-  28      3
-  29      2
-  30      8
-  51      1
-  52      7
-  53      6
-  54      1
-  55      0
-  56      6
-  57      1
-  58      0
-  59      6
-  60      1
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      32
-  22      27
-  23      22
-  24      24
-  25      19
-  26      14
-  27      16
-  28      11
-  29      13
-  30      8
-  51      33
-  52      28
-  53      30
-  54      25
-  55      27
-  56      22
-  57      17
-  58      19
-  59      14
-  60      9
+  # Compile a C++ file
+  g++ -std=c++23 -Wall -Wextra -Wpedantic -g -o CXX/hash_function_cpp CXX/main.cpp CXX/hash_fn.cpp
   ```
 
-- Example output for strings:
-  ```
-  === String Hash (m = 10) ===
-  Key     Index
-  -----------------
-  cat     2
-  dog     4
-  bat     1
-  cow     9
-  ant     3
-  owl     8
-  bee     0
-  hen     5
-  pig     0
-  fox     3
+### Execution
+```bash
+# Execute the C version
+./hash_function
 
-  === String Hash (m = 11) ===
-  Key     Index
-  -----------------
-  cat     10
-  dog     6
-  bat     6
-  cow     7
-  ant     9
-  owl     6
-  bee     5
-  hen     5
-  pig     0
-  fox     9
+# Execute the C++ version
+./hash_function_cpp
+```
 
-  === String Hash (m = 37) ===
-  Key     Index
-  -----------------
-  cat     27
-  dog     3
-  bat     28
-  cow     20
-  ant     25
-  owl     23
-  bee     26
-  hen     29
-  pig     27
-  fox     18
-  ```
+### Output Snapshot
+
 
 ## Observations
 From the integer results, I observed that non-prime table sizes create clear patterns. For example, when using m = 10 or m = 11, many keys fall into repeating index cycles, and several positions get crowded. This shows that the modulus interacts with the key pattern and produces many collisions.
@@ -327,3 +156,13 @@ In this experiment, I learned how the design of a hash function and the choice o
 I also realized that hashing is not just about the function itself but also about how it interacts with the table size. A good hash function can still produce poor results if the table size is not chosen carefully. Using a prime number helps break unwanted patterns and gives the hash a more “random-like” behavior, even though the algorithm is deterministic.
 
 From these tests, I saw that collisions are hard to avoid completely, but we can reduce them by using a larger prime table size, rehashing when the table becomes too full, or improving the mixing step of the hash function. Overall, this exercise helped me understand why hash tables need both a good hash function and a good table size to work efficiently.
+
+## References
+### Why I chose 31-Multiplier
+31 is a prime number. Using a prime number as a multiplier in hashing algorithms generally leads to a better distribution of hash values, which helps in reducing collisions within hash tables. This is particularly relevant when the modulus (often the size of the hash table) is also a prime number or when the multiplier is relatively prime to the modulus.
+- [Link](https://www.quora.com/Why-is-31-used-in-Hashcode)
+
+
+### Why I chose Knuth's Mutiplicative Hash
+ It's a fast and simple method that provides a good distribution of keys for hash tables, especially when the table size is a power of two. It works by multiplying a key by a constant, taking the fractional part of the result, and then multiplying by the table size to determine the index.
+ - [Link](https://stackoverflow.com/questions/11871245/knuth-multiplicative-hash)
