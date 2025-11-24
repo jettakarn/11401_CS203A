@@ -62,13 +62,24 @@ AssignmentIV/
   ```
 - Rationale: This handles non-integer keys by converting the string into a number through a rolling process where each character updates the hash. Multiplying by 31 and adding the character value spreads differences between strings, even if they look similar. Taking the modulus at each step keeps values bounded and maintains a stable distribution. Overall, it is simple, fast, and gives a reasonably uniform spread of string keys, which helps reduce collisions.
 
+### Prerequisites & Build
+- Tool
+  - Microsoft Visual Studio Code
+
+- System Dependencies
+  - Make: Automating the compilation workflow
+  - Git: Cloning and version control
+
+- Environment
+  - OS: Ubuntu 24.04.3 LTS
+  - Compiler: GCC and G++
+  - Standard: C17 and C++23
+
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
 - Test dataset:
   - Integers: 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60
   - Strings: "cat", "dog", "bat", "cow", "ant", "owl", "bee", "hen", "pig", "fox"
-- Compiler: GCC and G++
-- Standard: C23 and C++23
 
 ## Results
 ### Integer Keys
@@ -86,19 +97,6 @@ AssignmentIV/
 | 37             | 27, 3, 28, 20, 25, 23, 26, 29, 27, 18 | Almost uniform                     |
 
 ## Compilation, Build, Execution, and Output
-
-### Prerequisites & Build
-- Tool
-  - Microsoft Visual Studio Code
-
-- System Dependencies
-  - Make: Automating the compilation workflow
-  - Git: Cloning and version control
-
-- Environment
-  - OS: Ubuntu 24.04.3 LTS
-  - Language: C17 and C++23
-
 ### Compilation
 - Build with a simple Makefile:
   ```bash
@@ -115,7 +113,7 @@ AssignmentIV/
   make clean
   ```
 
-- Using the default GNU compilers (manual compilation)
+- Use the default GNU compilers (manual compilation)
   ```bash
   # Compile a C file
   gcc -std=c17 -Wall -Wextra -Wpedantic -g -o C/hash_function C/main.c C/hash_fn.c
@@ -124,19 +122,19 @@ AssignmentIV/
   g++ -std=c++23 -Wall -Wextra -Wpedantic -g -o CXX/hash_function_cpp CXX/main.cpp CXX/hash_fn.cpp
   ```
 
-### Execution
-```bash
-# Execute the C version
-./hash_function
+- Program execution
+  ```bash
+  # Execute the C version
+  ./hash_function
 
-# Execute the C++ version
-./hash_function_cpp
-```
+  # Execute the C++ version
+  ./hash_function_cpp
+  ```
 
 ### Output Snapshot
 
 
-## Observations
+### Observations
 From the integer results, I observed that non-prime table sizes create clear patterns. For example, when using m = 10 or m = 11, many keys fall into repeating index cycles, and several positions get crowded. This shows that the modulus interacts with the key pattern and produces many collisions.
 
 For the string results, a similar problem appears. With small non-prime values, several words end up in the same index, and the distribution looks unbalanced. Some indices are used many times, while others are almost never used.
