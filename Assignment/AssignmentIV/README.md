@@ -132,7 +132,15 @@ AssignmentIV/
   ```
 
 ### Output Snapshot
+- Integer
+  <img width="263" height="523" alt="int_1" src="https://github.com/user-attachments/assets/dbff0e92-b698-445d-a7a5-c13cb445b7f5" />
+  <img width="263" height="523" alt="int_2" src="https://github.com/user-attachments/assets/ed6c23fa-89c7-46aa-bcc3-0c5f65c90c77" />
+  <img width="263" height="523" alt="int_3" src="https://github.com/user-attachments/assets/02faa17c-5406-447c-b6ea-58af1efec58d" />
 
+- String
+  <img width="290" height="301" alt="str_1" src="https://github.com/user-attachments/assets/23ffa6b5-c104-48c6-9e86-2f481af9ba2b" />
+  <img width="290" height="301" alt="str_2" src="https://github.com/user-attachments/assets/ae780c83-4f26-4c33-a8cc-64d1e20aa3fe" />
+  <img width="290" height="301" alt="str_3" src="https://github.com/user-attachments/assets/6bfc6418-0298-44d6-95ce-41f7717ca3d4" />
 
 ### Observations
 From the integer results, I observed that non-prime table sizes create clear patterns. For example, when using m = 10 or m = 11, many keys fall into repeating index cycles, and several positions get crowded. This shows that the modulus interacts with the key pattern and produces many collisions.
