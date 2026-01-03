@@ -17,8 +17,6 @@
 * **Student ID:** 1133524
 * **Personal Site:** [jettakarn.github.io](https://jettakarn.github.io/)
 
----
-
 ## Repository Description
 This repository serves as a submission platform and study record for the Data Structures course. It contains:
 * Homework assignments
