@@ -27,9 +27,9 @@ This repository serves as a submission platform and study record for the Data St
 
 ```text
 .
-├── Assignments/    # Homework submissions and problem sets
-├── Code/           # Playground for testing algorithms
-├── StudyNote/      # Lecture notes and algorithm analysis
+├── Assignments/    # Homework submissions
+├── Code/           # Playground for testing codes
+├── StudyNote/      # Lecture notes and analysis
 ├── Utility/        # Reusable source code for data structures
 └── README.md       # Project documentation
 ```
